@@ -3,11 +3,12 @@
 
 ## How to run it
 
-In terminal, copy command:
+In terminal, write command:
 
+```bash
 npm install
 npm start
-
+```
 
 
 ## My contribution
