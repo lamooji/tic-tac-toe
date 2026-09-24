@@ -1,5 +1,5 @@
-# Tic-Tac-Toe
-
+# Project Overview
+A tic-tac-toe game built with React, based on the official React tutorial and extended with a scoreboard and a Restart button for starting a new game.
 
 ## How to run it
 
