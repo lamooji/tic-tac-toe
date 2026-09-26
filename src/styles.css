@@ -89,9 +89,13 @@ body {
   margin-left: 20px;
 }
 
-.restart {
-  display: block;
+.controls {
+  display: flex;
+  gap: 8px;
   margin-top: 12px;
+}
+
+.restart {
   padding: 6px 14px;
   cursor: pointer;
 }
@@ -104,7 +108,7 @@ body {
   font-weight: bold;
 }
 
-.reset-scores {
-  font-size: 12px;
+.reset_scores {
+  padding: 6px 14px;
   cursor: pointer;
 }

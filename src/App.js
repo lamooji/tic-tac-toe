@@ -57,9 +57,7 @@ export default function Game() {
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
-  // scoreboard: total wins for X and O
   const [scores, setScores] = useState({ X: 0, O: 0 });
-
   const [scored, setScored] = useState(false);
 
   function handlePlay(nextSquares) {
@@ -67,7 +65,7 @@ export default function Game() {
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
 
-    // update the scoreboard when this move ends the game (count each game once)
+    //update the scoreboard
     if (!scored) {
       const winner = calculateWinner(nextSquares);
       if (winner) {
@@ -81,7 +79,6 @@ export default function Game() {
     setCurrentMove(nextMove);
   }
 
-  // restart the game
   function handleRestart() {
     setHistory([Array(9).fill(null)]);
     setCurrentMove(0);
@@ -111,9 +108,8 @@ export default function Game() {
     <div className="game">
       <div className="game-board">
         <div className="scoreboard">
-          <span>X: {scores.X}</span>
-          <span>O: {scores.O}</span>
-          <button className="reset-scores" onClick={handleResetScores}>
+          <span>X: {scores.X} O: {scores.O}</span>
+          <button className="reset_scores" onClick={handleResetScores}>
             Reset scores
           </button>
         </div>
